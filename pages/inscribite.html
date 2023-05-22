@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inscripción anual completa">
+    <meta name="keywords" content="Inscripción Gimnasio, Inscripción Crossfit, Inscripción Boxeo">
+    <meta name="author" content="Martin Yegros">
+    <meta name="copyright" content="MarGym">
+    <meta property="og: title" content="Gimnasio Unisex">
+    <meta property="og: description" content="Inscripción, Gimnasio, Entrenamiento">
+    <title>Inscribite | MarGym</title>
+    <link rel="icon" href="../assets/img/icono.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    
+    <header class="headerr">
+        <div class="logo">
+            <a href= "">
+                <img src="../assets/img/LogoMartGym-white.png" alt="Logo del Gimnasio">
+            </a>
+        </div>
+        <nav>
+            <ul class="navegador">
+                <li>
+                    <a href="">CLASES</a>
+                </li>
+                <li>
+                    <a href="../index.html">PRODUCTOS</a>
+                </li>
+                <li>
+                    <a href="">NOSOTROS</a>
+                </li>
+                <li id="inscribite">
+                    <a href="inscribite.html">Inscribite</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secIns">
+            <div>
+                <h1 class="titIns">INSCRIBITE</h1>
+            </div>
+            
+            <div class="card-container">
+                <div class="card">
+                    <h2>Plan Simple</h2>
+                    <h3 class="precio">$5000</h3>
+                    <h3>xMes</h3>
+                    <ul class="listIns">
+                        <li>Musculación Libre</li>
+                        <li>Clases de Funcional</li>
+                        <li>Clases de Yoga</li>
+                        <p>
+                            <button id="comp1">Comprar</button>
+                        </p>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>Plan Medio</h2>
+                    <h3 class="precio">$6500</h3>
+                    <h3>xMes</h3>
+                    <ul class="listIns">
+                        <li>Musculación Libre</li>
+                        <li>Clases de Funcional</li>
+                        <li>Clases de Crossfit</li>
+                        <li>Clases de Yoga</li>
+                        <p>
+                            <button id="comp2">Comprar</button>
+                        </p>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>Plan Completo</h2>
+                    <h3 class="precio">$8000</h3>
+                    <h3>xMes</h3>
+                    <ul class="listIns">
+                        <li>Musculación Libre</li>
+                        <li>Todas las clases Fitness</li>
+                        <li>Boxeo</li>
+                        <p>
+                            <button id="comp3">Comprar</button>
+                        </p>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <form id="form-registrar" action="" method="post">
+                    <fieldset class="cuadroDos">
+                        <legend class="titInfo">Información Personal</legend>
+                        <hr class="cheUno">
+                        <input id="nomb" class="formUno" type="text" placeholder="Nombre">
+                        <input id="dire" class="formDos" type="text" placeholder="Dirección">
+                        <input id="ndocu" class="formTres" type="tel" placeholder="DNI">
+                        <input id="nacim" class="formCuatro" type="date" placeholder="Fecha de Nacimiento">
+                        <input id="tele" class="formCinco" type="tel" placeholder="Teléfono">
+                        <input id="corr" class="formSeis" type="email" placeholder="Correo Electrónico">
+                    </fieldset>
+                    <fieldset class=" cuadroTres">
+                        <legend class="titPago">Pago</legend>
+                        <hr class="cheDos">
+                        <input id="nombtit" class="formSiete" type="text" placeholder="Nombre del titular">
+                        <input id="nacimtit" class="formOcho" type="date" placeholder="Fecha de nacimiento">
+                        <input id="nombtar" class="formNueve" type="text" placeholder="Nombre figura en Tarjeta">
+                        <input id="numtar" class="formDiez" type="tel" placeholder="Nº de Tarjeta">
+                        <input id="segutar" class="formOnce" type="tel" placeholder="Nº de Seguridad">
+                        <select id="numcuota" class="formDoce" name="Cuotas">
+                            <option value="3">3 cuotas</option>
+                            <option value="6">6 cuotas</option>
+                            <option value="12">12 cuotas</option>
+                        </select>
+                    </fieldset>
+                    <button type="submit" id="enviarins" >Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <ul class="redesSociales">
+                <li>
+                    <a href="https://instagram.com/" target="_blank">
+                        <img src="../assets/img/instagram.png" alt="Logo de Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://es-la.facebook.com/" target="_blank">
+                        <img src="../assets/img/facebook.png" alt="Logo de Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="../assets/img/youtube.png" alt="Logo de Youtube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="copy">
+            <p>Copyright ©2023</p>
+        </div>
+    </footer>
+
+    <script src="../model/cliente.js"></script>
+    <script src="../model/user.js"></script>
+</body>
+
+</html>

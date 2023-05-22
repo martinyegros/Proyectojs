@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+/*colores
+#404258
+#474E68
+#50577A
+#6B728E*/
+
+body {
+    position: relative; }
+
+.headerr {
+    background-image: url(../assets/img/01.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 84.22px;
+    left: 0%;
+    top: 0%;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+
+.headerr .logo a img {
+    position: absolute;
+    width: 13.195%;
+    height: 37.19px;
+    left: 5%;
+    top: 25%; }
+
+
+.headerr nav .navegador {
+    display: flex;
+    gap: 5%;
+    list-style: none;
+    position: absolute;
+    width: 40%;
+    height: 79.8px;
+    left: 58.35%;
+    top: 0%;
+    align-items: center;
+    padding: 0%;
+    margin: 0%; }
+
+.headerr nav .navegador li a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 139%;
+    line-height: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none; }
+
+.headerr nav .navegador #inscribite {
+    width: 125px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 5px solid black;
+    border-radius: 20px;
+    background: #50577A;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.headerr nav .navegador #inscribite a {
+    font-family: "Poppins", sans-serif;
+    font-size: 90%; }
+
+.headerr nav .navegador #inscribite :hover {
+    color: black; }
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 46.16px;
+    left: 0%;
+    top: 1234.22px;
+    display: flex;
+    background: #6B728E;
+    justify-content: space-between;}
+
+footer div .redesSociales {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+    top: 30%;
+    left: 45.2%;
+    position: absolute;}
+
+footer div .redesSociales li a img {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;}
+
+#foot div .redesSociales {
+    left: 42.7%;
+} 
+
+footer .copy {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: black;
+    font-family: "Poppins", sans-serif; }
+
+footer .copy p {
+    position: absolute;
+    width: 104px;
+    height: 18px;
+    right: 36px;
+    top: 17px;
+    margin: 0%; }
+
+.compras {
+    background-image: url(../assets/img/14.jpg);
+    position: absolute;
+    width: 100%;
+    height: 1150px;
+    left: 0px;
+    top: 84.22px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.compras .comprasUno {
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    left: 0%;
+    top: 0px;
+}
+
+.compras .comprasUno div .titComp {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 250%;
+    line-height: 50%;
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5em;
+    -webkit-animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+    
+    @-webkit-keyframes focus-in-contract-bck {
+        0% {
+            letter-spacing: 1em;
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            -webkit-filter: blur(12px);
+            filter: blur(12px);
+            opacity: 0; }
+        100% {
+            -webkit-transform: translateZ(12px);
+            transform: translateZ(12px);
+            -webkit-filter: blur(0);
+            filter: blur(0);
+            opacity: 1; } }
+    
+    @keyframes focus-in-contract-bck {
+        0% {
+            letter-spacing: 1em;
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            -webkit-filter: blur(12px);
+            filter: blur(12px);
+            opacity: 0; }
+        100% {
+            -webkit-transform: translateZ(12px);
+            transform: translateZ(12px);
+            -webkit-filter: blur(0);
+            filter: blur(0);
+            opacity: 1; } }
+
+#carouselExampleControls{
+    width: 100%;
+    position: absolute;
+    top: 140px;
+}
+
+.cards-wrapper {
+    display: flex;
+}
+
+.card {
+    margin: 0.5em;
+    height: 250px;
+    width: 33%;
+    background-color: #6B728E;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-title {
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 50%;
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+}
+
+.comprasDos {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    left: 0%;
+    top: 450px;
+}
+
+.compras .comprasDos div div form label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 150%;
+    line-height: 150%;
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+.font-white {
+    color: #6B728E;
+}
+
+.secIns {
+    background-image: url(../assets/img/10.jpg);
+    width: 100%;
+    height: 1150px;
+    left: 0px;
+    top: 84.22px;
+    position: relative;
+    display: flex;
+    background-position: 50% 50%;
+    background-size: cover; }
+
+.secIns div .titIns {
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 250%;
+    line-height: 50%;
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5em;
+    -webkit-animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+    
+    @-webkit-keyframes focus-in-contract-bck {
+        0% {
+            letter-spacing: 1em;
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            -webkit-filter: blur(12px);
+            filter: blur(12px);
+            opacity: 0; }
+        100% {
+            -webkit-transform: translateZ(12px);
+            transform: translateZ(12px);
+            -webkit-filter: blur(0);
+            filter: blur(0);
+            opacity: 1; } }
+    
+    @keyframes focus-in-contract-bck {
+        0% {
+            letter-spacing: 1em;
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+            -webkit-filter: blur(12px);
+            filter: blur(12px);
+            opacity: 0; }
+        100% {
+            -webkit-transform: translateZ(12px);
+            transform: translateZ(12px);
+            -webkit-filter: blur(0);
+            filter: blur(0);
+            opacity: 1; } }
+
+.secIns .card-container {
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 12%; }
+
+.secIns .card-container .card {
+    width: 25%;
+    height: 280px;
+    background: #50577A;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: none;
+    position: relative;
+    border-radius: 30px;
+    -webkit-animation: heartbeat 2s ease-in-out infinite both;
+    animation: heartbeat 2s ease-in-out infinite both; }
+    
+    @-webkit-keyframes heartbeat {
+        from {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+        10% {
+            -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+        17% {
+            -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+        33% {
+            -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+        45% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; } }
+    
+    @keyframes heartbeat {
+        from {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+        10% {
+            -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+        17% {
+            -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+        33% {
+            -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+        45% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; } }
+
+.secIns .card-container .card h2 {
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    left: 5%;
+    top: 5%;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 200%;
+    line-height: 50%;
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif; }
+
+.secIns .card-container .card .precio {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    left: 0%;
+    top: 20%;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 280%;
+    line-height: 50%;
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif; }
+
+.secIns .card-container .card h3 {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0%;
+    top: 35%;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 140%;
+    line-height: 30%;
+    text-align: center;
+    color: white;
+    font-family: "Roboto", sans-serif; }
+
+.secIns .card-container .card .listIns {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0%;
+    top: 45%;
+    list-style: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 120%;
+    line-height: 150%;
+    text-align: center;
+    color: black;
+    font-family: "Poppins", sans-serif; }
+
+.secIns .card-container .card .listIns p button {
+    border: none;
+    outline: 0;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 30px; }
+
+.secIns .card-container .card .listIns p button :hover {
+    opacity: 0.7; }
+
+.secIns div form .cuadroDos {
+    position: absolute;
+    width: 40%;
+    height: 47%;
+    left: 5%;
+    top: 42.7%;
+    background: #474E68;
+    border-radius: 30px; }
+
+.secIns div form .cuadroDos .titInfo {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0%;
+    top: 8%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 220%;
+    line-height: 120%;
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif; }
+
+.secIns div form .cuadroDos .cheUno {
+    position: absolute;
+    width: 88%;
+    height: 0%;
+    left: 6%;
+    top: 21%;
+    border: 1px solid black; }
+
+.secIns div form .cuadroDos .formUno {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    left: 10%;
+    top: 31.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroDos .formDos {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    right: 10%;
+    top: 31.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroDos .formTres {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    left: 10%;
+    top: 55.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroDos .formCuatro {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    right: 10%;
+    top: 55.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroDos .formCinco {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    left: 10%;
+    top: 79.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroDos .formSeis {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    right: 10%;
+    top: 79.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroTres {
+    position: absolute;
+    width: 40%;
+    height: 47%;
+    right: 5%;
+    top: 42.7%;
+    background: #474E68;
+    border-radius: 30px; }
+
+.secIns div form .cuadroTres .titPago {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0%;
+    top: 8%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 220%;
+    line-height: 120%;
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif; }
+
+.secIns div form .cuadroTres .cheDos {
+    position: absolute;
+    width: 88%;
+    height: 0px;
+    left: 6%;
+    top: 21%;
+    border: 1px solid black; }
+
+.secIns div form .cuadroTres .formSiete {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    left: 10%;
+    top: 31.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroTres .formOcho {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    right: 10%;
+    top: 31.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroTres .formNueve {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    left: 10%;
+    top: 55.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroTres .formDiez {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    right: 10%;
+    top: 55.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroTres .formOnce {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    left: 10%;
+    top: 79.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form .cuadroTres .formDoce {
+    position: absolute;
+    width: 35%;
+    height: 12%;
+    right: 10%;
+    top: 79.5%;
+    background: white;
+    border-radius: 10px;
+    text-align: center; }
+
+.secIns div form button {
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 30px;
+    position: absolute;
+    width: 8%;
+    height: 3%;
+    left: 46%;
+    top: 92%;
+    background: #6B728E;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    -webkit-animation: shake-bottom 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+    animation: shake-bottom 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;}
+    
+    @-webkit-keyframes shake-bottom {
+        0%,
+        100% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%; }
+        10% {
+            -webkit-transform: rotate(2deg);
+            transform: rotate(2deg); }
+        20%,
+        40%,
+        60% {
+            -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg); }
+        30%,
+        50%,
+        70% {
+            -webkit-transform: rotate(4deg);
+            transform: rotate(4deg); }
+        80% {
+            -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg); }
+        90% {
+            -webkit-transform: rotate(2deg);
+            transform: rotate(2deg); } }
+    
+    @keyframes shake-bottom {
+        0%,
+        100% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%; }
+        10% {
+            -webkit-transform: rotate(2deg);
+            transform: rotate(2deg); }
+        20%,
+        40%,
+        60% {
+            -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg); }
+        30%,
+        50%,
+        70% {
+            -webkit-transform: rotate(4deg);
+            transform: rotate(4deg); }
+        80% {
+            -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg); }
+        90% {
+            -webkit-transform: rotate(2deg);
+            transform: rotate(2deg); } 
+        }

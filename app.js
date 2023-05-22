@@ -1,141 +1,97 @@
+let carrito = []
+let stock = []
 
-/* let nombre;
-let edad = 0;
-let numDni;
-let pases = '';
-let opcion;
+//DOM
+const tabla = document.getElementById('items');
+const selectProductos = document.getElementById('productos');
+const botonAgregar = document.getElementById('agregar');
+const botonComprar = document.getElementById('comprar');
+const total = document.getElementById('total');
 
-alert('Bienvenidos a Club Maryeg!');
-alert('Ingrese los datos de la persona que desea anotar en la lista free')
+stock.push(new Producto('Mancuerna 10kg', 5000));
+stock.push(new Producto('Pesa Rusa 5kg', 4000));
+stock.push(new Producto('Disco 20kg', 9000));
+stock.push(new Producto('Colchoneta',2000));
+stock.push(new Producto('Soga', 4000));
+stock.push(new Producto('Tobillera', 2500));
+stock.push(new Producto('Whey Protein 1kg', 9000));
+stock.push(new Producto('Whey Protein 453gr', 6000));
+stock.push(new Producto('Oxido 400gr', 3500));
 
-do {
-    nombre = prompt("Ingrese Nombre");
-    while (nombre == '') {
-        nombre = prompt("No ingresó algún Nombre, ingrese un Nombre"); 
-    }
-    edad = Number(prompt("Ingrese edad"));
-    if (edad < 18 || edad > 35) {
-        alert("Edad no permitida para ingresar al establecimiento");
+localStorage.setItem('stock',JSON.stringify(stock));
+
+allEventListeners();
+
+function allEventListeners() {
+    window.addEventListener('DOMContentLoaded', traerCompras);
+
+    botonAgregar.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const productoSeleccionado = stock[+selectProductos.value];
+        console.log(productoSeleccionado);
+        const indiceCarrito = carrito.findIndex((item) => { return item.producto.nombre == productoSeleccionado.nombre});
+        console.log(indiceCarrito);
+        if (indiceCarrito != -1) {
+            carrito[indiceCarrito].cantidad++;
+        } else {
+            const item = new Item(productoSeleccionado,1);
+            carrito.push(item);
+        }
+        actualizarCarrito();
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    })
+}
+
+function traerCompras() {
+    stock = JSON.parse(localStorage.getItem('stock')) || [];
+    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    dropDown();
+    actualizarCarrito();
+}
+
+function dropDown() {
+    stock.forEach((producto,index) => {
+        const option = document.createElement('option');
+        option.textContent = `${producto.nombre}: ${producto.precio}`;
+        option.value = index;
+        selectProductos.appendChild(option);
+    })
+}
+
+function actualizarCarrito() {
+    tabla.innerHTML = '';
+    total.innerText = 0;
+    carrito.forEach((item) => {
+        nuevoProducto(item);
+    });
+}
+
+function nuevoProducto(item) {
+    const tabla = document.getElementById('items');
+    tabla.innerHTML = ``;
+    let counter = 1;
+
+    carrito.forEach((item) => {
+        tabla.innerHTML = tabla.innerHTML +
+                        `
+                        <tr>
+                            <td> ${item.producto.nombre} </td>
+                            <td> ${item.cantidad} </td>
+                            <td> ${item.producto.precio} </td>
+                        `;
+        counter++;
+    })
+    total.innerText = carrito.reduce((acumulador,item) => acumulador + item.producto.precio * item.cantidad,0);
+}
+
+botonComprar.onclick = (() => {
+    const realizarCompra = prompt ('¿Desea realizar la compra? si / no');
+    if(realizarCompra == 'si') {
+        carrito = [];
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        actualizarCarrito();
+        alert('Gracias por su compra!');
     } else {
-        numDni = Number(prompt("Ingrese número de DNI"));
-        while (numDni == '') {
-            numDni = Number(prompt("Ingrese nuevamente número de DNI")) 
-        }
-        pases = pases + `${nombre} Edad: ${edad} DNI: ${numDni} \n`;
+        alert('Continue comprando');
     }
-    opcion = prompt('¿Desea ingresar a otra persona?');
-
-} while (opcion == 'si');
-
-alert(`Las personas que ingresan por lista free son: \n ${pases}`); */
-
-
-const artistas = [];
-
-artistas.push(new Artista('Britney Spears', 41, 'Pop', 'Estados Unidos'));
-artistas.push(new Artista('Years&Years', 32, 'Pop', 'Londres'));
-artistas.push(new Artista('Lali', 31, 'Pop', 'Argentina'));
-artistas.push(new Artista('Ataque 77', 58, 'Rock', 'Argentina'));
-artistas.push(new Artista('Los Piojos', 55, 'Rock', 'Argentina'));
-artistas.push(new Artista('Tini', 26, 'Pop', 'Argentina'));
-artistas.push(new Artista('Miranda', 48, 'Pop', 'Argentina'));
-artistas.push(new Artista('Abel Pintos', 38, 'Pop', 'Argentina'));
-artistas.push(new Artista('Daddy Yankee', 46, 'Regueton', 'Puerto Rico'));
-artistas.push(new Artista('Linkin Park', 46, 'Rock', 'Estados Unidos'));
-artistas.push(new Artista('Don Omar', 45, 'Regueton', 'Puerto Rico'));
-artistas.push(new Artista('Lady Gaga', 37, 'Pop', 'Estados Unidos'));
-artistas.push(new Artista('Evanescense', 41, 'Rock', 'Estados Unidos'));
-artistas.push(new Artista('Madonna', 64, 'Pop', 'Estados Unidos'));
-artistas.push(new Artista('Anitta', 30, 'Regueton', 'Brasil'));
-
-
-let opcion;
-alert('Bienvenidos a MusicaMY');
-
-do{
-    const eleccion = prompt('1 - Mostrar los artistas del género musical ingresado por el usuario\n' + 
-                        '2 - Buscar un artista musical por su nombre\n' +
-                        '3 - Ver el modo en el que se presentará el artista\n' +
-                        '4 - Mostar a los artistas Argentinos\n' +
-                        '5 - Visualizar las edades de los artistas'
-                        )
-
-    switch(eleccion) {
-        case '1': mostrarArtistas();
-        break;
-        case '2': buscarPorNombre();
-        break;
-        case '3': tipoDeCanto();
-        break;
-        case '4': mostrarNacionalidad();
-        break;
-        case '5':mostrarEdad();  
-    }
-
-    //1
-    function mostrarArtistas(){
-        const eleccionUsuario = prompt('Ingrese algún género musical\n' +
-                                    'Pop\n' +
-                                    'Rock\n' +
-                                    'Regueton');
-    
-        if (eleccionUsuario == 'Pop'){
-        console.log(artistas.filter((item) => {return item.genero == 'Pop'}));
-        } else {
-            if (eleccionUsuario == 'Rock'){
-                console.log(artistas.filter((item) => {return item.genero == 'Rock'}));
-            } else {
-                if (eleccionUsuario == 'Regueton'){
-                    console.log(artistas.filter((item) => {return item.genero == 'Regueton'}));
-                } else {
-                    alert('No seleccionaste alguna opción de los géneros');
-                }
-            }
-        };
-    }
-
-    //2
-    function buscarPorNombre(){
-        const eleccionUsuario = prompt('Ingrese nombre de algun artista musical');
-        const artistaEncontrado = artistas.find((item) => { return item.nombre == eleccionUsuario})
-
-        if (artistaEncontrado) {
-            console.log(artistaEncontrado);
-        } else {
-            alert('No ingresaste nombre de algún artista musical archivado');
-        }
-    }
-
-    //3
-    function tipoDeCanto() {
-        const eleccionUsuario = prompt('Ingrese nombre de algun artista musical');
-        const artistaEncontrado = artistas.find((item) => { return item.nombre == eleccionUsuario})
-        const modo = prompt('Ingrese el modo en el que se presentará el artista:\n' +
-                            'Vivo\n' +
-                            'Videoclip\n' +
-                            'Podcast\n' +
-                            'Stream');
-        if (artistaEncontrado) {
-            artistaEncontrado.cantar(modo);
-        } else {
-            alert('No seleccionaste alguna opción correcta');
-        }
-    }
-
-    //4
-    function mostrarNacionalidad(){
-        const artistasArgentinos = artistas.slice(2,8);
-        console.log(artistasArgentinos);
-    }
-
-    //5
-    function mostrarEdad(){
-        const edadArtistas = artistas.map((item) => {return{nombre: item.nombre, edad: item.edad}});
-        console.log(edadArtistas);
-    }
-
-    opcion = prompt('¿Desea volver al menú?');
-} while (opcion == 'si');
-
-
-
+})
