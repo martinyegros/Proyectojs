@@ -66,7 +66,7 @@ function actualizarCarrito() {
     });
 }
 
-function nuevoProducto(item) {
+function nuevoProducto() {
     const tabla = document.getElementById('items');
     tabla.innerHTML = ``;
     let counter = 1;
