@@ -5,191 +5,442 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Venta de productos de gimnasio">
-    <meta name="keywords" content="Venta de mancuernas, Venta de pesas, Venta de proteinas">
+    <meta name="description" content="Abonando en efectivo tenés un 15% de descuento">
+    <meta name="keywords" content="Gimnasio, Crossfit, Boxeo, Funcional, Yoga">
     <meta name="author" content="Martin Yegros">
     <meta name="copyright" content="MarGym">
     <meta property="og: title" content="Gimnasio Unisex">
-    <meta property="og: description" content="Productos, Gimnasio, Entrenamiento">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-    <title>Productos | MarGym</title>
+    <meta property="og: description" content="Gimnasio, Entrenamiento, Crossfit">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Inicio | MarGym</title>
     <link rel="icon" href="./assets/img/icono.png">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     
-    <header class="headerr">
+    <header>
         <div class="logo">
-            <a href= "">
+            <a href="#secUno">
                 <img src="./assets/img/LogoMartGym-white.png" alt="Logo del Gimnasio">
             </a>
         </div>
-        <nav>
+        <nav class="fix">
             <ul class="navegador">
                 <li>
-                    <a href="">CLASES</a>
+                    <a href="#secDos">CLASES</a>
                 </li>
                 <li>
-                    <a href="index.html">PRODUCTOS</a>
+                    <a href="#secTres">PRODUCTOS</a>
                 </li>
                 <li>
-                    <a href="">NOSOTROS</a>
+                    <a href="#secCuatro">HORARIOS</a>
                 </li>
-                <li id="inscribite">
-                    <a href="./pages/inscribite.html">Inscribite</a>
+                <li>
+                    <a href="#secCinco">INSCRIBITE</a>
+                </li>
+                <li>
+                    <a href="#secSeis">NOSOTROS</a>
                 </li>
             </ul>
         </nav>
-    </header>
 
-    <main class="compras">
-        <section class="comprasUno">
-            <div>
-                <h1 class="titComp">PRODUCTOS</h1>
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-cart">
+                    <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" clip-rule="evenodd" />
+                </svg>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
             </div>
-            <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="cards-wrapper">
-                            <div class="card">
-                                <div class="image-wrapper">
-                                    <img src="./assets/img/m1.jpeg" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-title">Mancuerna 10kg</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="image-wrapper">
-                                    <img src="./assets/img/m2.jpg" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-title">Pesa Rusa 5kg</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="image-wrapper">
-                                    <img src="./assets/img/m3.jpg" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-title">Disco 20kg</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
+            <div class="container-cart-products hidden-cart">
+                <div class="cart-tit">
+                    <p>CARRITO DE COMPRAS</p>
+                </div>
 
-                    <div class="carousel-item">
-                        <div class="cards-wrapper">
-                            <div class="card">
-                                <div class="image-wrapper">
-                                    <img src="./assets/img/c1.jpg" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-title">Colchoneta</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="image-wrapper">
-                                    <img src="./assets/img/c2.jpg" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-title">Soga</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="image-wrapper">
-                                    <img src="./assets/img/c3.jpg" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-title">Tobillera</p>
-                                </div>
-                            </div>
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito"></p>
+                            <span class="precio-producto-carrito"></span>
                         </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="cards-wrapper">
-                            <div class="card">
-                                <div class="image-wrapper">
-                                    <img src="./assets/img/w1.jpeg" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-title">Whey Protein 1kg</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="image-wrapper">
-                                    <img src="./assets/img/w2.jpeg" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-title">Whey Protein 453gr</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="image-wrapper">
-                                    <img src="./assets/img/w3.jpeg" alt="...">
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-title">Oxido 400gr</p>
-                                </div>
-                            </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-close">
+                                <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
+                            </svg>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
+                <div class="cart-total hidden">
+                    <p>Total:</p>
+                    <span class="total-pagar"></span>
+                </div>
+                <p class="cart-empty">El carrito está vacío</p>
+                <div class="cart-pagar">
+                    <button class="btn-pagar">Pagar</button>
+                </div>
+            </div>       
+        </div>
+    </header>
+
+    <main>
+        <section id="secUno">
+            <div class="secImguno">
+                <a href="./pages/inscribte.html">
+                    <img src="./assets/img/LogoMartGym-white.png" alt="Lodo del Gimnasio">
+                </a>
+            </div>    
+            <div class="secTit">    
+                <h1>El PODER está en vos</h1>
             </div>
         </section>
 
-        <section class="comprasDos">
-            <div class="container">
-                <div class="container1 col">
-                    <form id="agregar">
-                        <label for="productos">ELIJA ALGÚN PRODUCTO</label>
-                        <select id="productos" class="form-select"></select>
-                        <br>
-                        <button id="agregar" class="btn btn-primary">Agregar</button>
-                    </form>
+        <section id="secDos">
+            <section class="titClas">
+                <h2>CLASES</h2>
+            </section>
+            <section class="musc1">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/11.jpg" class="d-block w-100" alt="Mujer levantando pesas">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>MUSCULACIÓN</h3>
+                                <p>Uso de maquinas free</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/12-1.jpg" class="d-block w-100" alt="Cuatro mujeres haciendo Yoga">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>CLASES FITNESS</h3>
+                                <p>Clases de Yoga, Clases de Spinning, Clases JUMP</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/13.jpg" class="d-block w-100" alt="Un hombre practicando boxeo con otro hombre">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>BOXEO</h3>
+                                <p>Clases de Boxeo, Clases de Box360</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <div class="container1 ">
-                    <table class="table table-dark">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Cantidad</th>
-                                <th>Precio Unitario</th>
-                            </tr>
-                        </thead>
-                        <tbody id="items">
-                        </tbody>
-                        <tfoot class="thead-dark">
-                            <tr>
-                                <th>Total: </th>
-                                <th></th>
-                                <th id="total"></th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
-                    </table>
+            </section>
+
+            <section class="musc2">
+                <div class="card" style="width: 18.5rem;">
+                    <img src="./assets/img/muscjump.jpg" class="card-img-top" alt="Profesor con una carpeta">
+                    <div class="card-body">
+                        <h4>Jorge</h4>
+                        <p class="card-text">Profesor de Musculación <br>
+                            Profesor de Jump</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18.5rem;">
+                    <img src="./assets/img/absaero.jpg" class="card-img-top" alt="Profesor">
+                    <div class="card-body">
+                        <h4>Luis</h4>
+                        <p class="card-text">Profesor de ABD <br>
+                            Profesor de Aero</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18.5rem;">
+                    <img src="./assets/img/crossfit.jpg" class="card-img-top" alt="Profesor">
+                    <div class="card-body">
+                        <h4>Pedro</h4>
+                        <p class="card-text">Profesor de Crossfit <br>Profesor de Boxeo</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18.5rem;">
+                    <img src="./assets/img/funcional.jpg" class="card-img-top" alt="Profesora levantando una mancuerna">
+                    <div class="card-body">
+                        <h4>Carla</h4>
+                        <p class="card-text">Profesora de Funcional <br> Profesora de Yoga</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="secTres">
+            <div>
+                <h5 class="titComp">PRODUCTOS</h5>
+            </div>
+    
+            <div class="row" id="items">
+    
+            </div>
+    
+            <template id="template-card">
+                <div class="card">
+                    <div class="image-wrapper">
+                        <img src="" alt="" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo</h5>
+                        <span class="card-precio">precio</span>
+                        <button class="btn btn-dark">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </template>
+        </section>
+
+        <section id="secCuatro">
+            <h5 id="titHor">HORARIOS</h5>
+            <table class="tabHor">
+                <tr>
+                    <th></th>
+                    <th>LUNES</th>
+                    <th>MARTES</th>
+                    <th>MIÉRCOLES</th>
+                    <th>JUEVES</th>
+                    <th>VIERNES</th>
+                    <th>SÁBADOS</th>
+                </tr>
+                <tr>
+                    <th>09:00</th>
+                    <td>Yoga</td>
+                    <td>-</td>
+                    <td>Yoga</td>
+                    <td>-</td>
+                    <td>Yoga</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>10:00</th>
+                    <td>-</td>
+                    <td>Aero</td>
+                    <td>-</td>
+                    <td>Aero</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>11:00</th>
+                    <td>-</td>
+                    <td>Crossfit</td>
+                    <td>-</td>
+                    <td>Crossfit</td>
+                    <td>-</td>
+                    <td>Crossfit</td>
+                </tr>
+                <tr>
+                    <th>12:00</th>
+                    <td>Funcional</td>
+                    <td>-</td>
+                    <td>Funcional</td>
+                    <td>-</td>
+                    <td>Funcional</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>13:00</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>14:00</th>
+                    <td>-</td>
+                    <td>Boxeo</td>
+                    <td>-</td>
+                    <td>Boxeo</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>15:00</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>ABS</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>ABS</td>
+                </tr>
+                <tr>
+                    <th>16:00</th>
+                    <td>Spinning</td>
+                    <td>-</td>
+                    <td>Spinning</td>
+                    <td>-</td>
+                    <td>Spinning</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>17:00</th>
+                    <td>-</td>
+                    <td>Spinning</td>
+                    <td>-</td>
+                    <td>Spinning</td>
+                    <td>-</td>
+                    <td>Spinning</td>
+                </tr>
+                <tr>
+                    <th>18:00</th>
+                    <td>Funcional</td>
+                    <td>Crossfit</td>
+                    <td>Funcional</td>
+                    <td>Crossfit</td>
+                    <td>Funcional</td>
+                    <td>Crossfit</td>
+                </tr>
+                <tr>
+                    <th>19:00</th>
+                    <td>-</td>
+                    <td>ABS</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>ABS</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>20:00</th>
+                    <td>Box360</td>
+                    <td>Boxeo</td>
+                    <td>Box360</td>
+                    <td>Boxeo</td>
+                    <td>Box360</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>21:00</th>
+                    <td>JUMP</td>
+                    <td>-</td>
+                    <td>JUMP</td>
+                    <td>-</td>
+                    <td>JUMP</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>22:00</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="secCinco">
+            <div>
+                <h5 class="titIns">INSCRIBITE</h5>
+            </div>
+            
+            <div class="card-container">
+                <div class="card">
+                    <h6>Plan Simple</h6>
+                    <h6 class="precio">$5000</h6>
+                    <h6 class="mes">xMes</h6>
+                    <ul class="listIns">
+                        <li>Musculación Libre</li>
+                        <li>Clases de Funcional</li>
+                        <li>Clases de Yoga</li>
+                        <p>
+                            <button>Comprar</button>
+                        </p>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h6>Plan Medio</h6>
+                    <h6 class="precio">$6500</h6>
+                    <h6 class="mes">xMes</h6>
+                    <ul class="listIns">
+                        <li>Musculación Libre</li>
+                        <li>Clases de Funcional</li>
+                        <li>Clases de Crossfit</li>
+                        <li>Clases de Yoga</li>
+                        <p>
+                            <button>Comprar</button>
+                        </p>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h6>Plan Completo</h6>
+                    <h6 class="precio">$8000</h6>
+                    <h6 class="mes">xMes</h6>
+                    <ul class="listIns">
+                        <li>Musculación Libre</li>
+                        <li>Todas las clases Fitness</li>
+                        <li>Boxeo</li>
+                        <p><button>Comprar</button></p>
+                    </ul>
                 </div>
             </div>
-            <div class="container m-1">
-                <button id="comprar" class="btn btn-primary">Comprar</button>
+            
+            <div>
+                <form id="form-registrar" action="" method="post">
+                    <fieldset class="cuadroDos">
+                        <legend class="titInfo">Información Personal</legend>
+                        <hr class="cheUno">
+                        <input id="nomb" class="formUno" type="text" placeholder="Nombre">
+                        <input id="dire" class="formDos" type="text" placeholder="Dirección">
+                        <input id="ndocu" class="formTres" type="number" placeholder="DNI">
+                        <input id="nacim" class="formCuatro" type="date" placeholder="Fecha de Nacimiento">
+                        <input id="tele" class="formCinco" type="number" placeholder="Teléfono">
+                        <input id="corr" class="formSeis" type="email" placeholder="Correo Electrónico">
+                    </fieldset>
+                    <fieldset class=" cuadroTres">
+                        <legend class="titPago">Pago</legend>
+                        <hr class="cheDos">
+                        <input id="nombtit" class="formSiete" type="text" placeholder="Nombre del titular">
+                        <input id="nacimtit" class="formOcho" type="date" placeholder="Fecha de nacimiento">
+                        <input id="nombtar" class="formNueve" type="text" placeholder="Nombre figura en Tarjeta">
+                        <input id="numtar" class="formDiez" type="number" placeholder="Nº de Tarjeta">
+                        <input id="segutar" class="formOnce" type="number" placeholder="Nº de Seguridad">
+                        <select id="numcuota" class="formDoce" name="Cuotas">
+                            <option value="3">3 cuotas</option>
+                            <option value="6">6 cuotas</option>
+                            <option value="12">12 cuotas</option>
+                        </select>
+                    </fieldset>
+                    <button type="submit" id="enviarins" >Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="secSeis">
+            <div>
+                <h5>NOSOTROS</h5>
+            </div>
+            <div class="nosUno">
+                <p>
+                    Somos un club que te acompaña en el proceso de alcanzar tus propios cambios. 
+                    <br>Estando a tu lado y ayudándote a que logres los objetivos que te propongas, en base al cuidado que necesites.
+                    <br>El PODER de realizar ese cambio, está en vos.
+                    <br> Nosotros, vamos a estar en cada paso que quieras dar.
+                </p>
+                <p class="parUno">Telefono 4444-4444</p>
+                <p class="parDos">Correo margym@gimnasio.com</p>
+            </div>
+            <div class="nosDos">
+                <iframe class="youtNos" width="560" height="315" src="https://www.youtube.com/embed/Ul6YONz8wM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
             </div>
         </section>
     </main>
 
-    <footer id="foot">
+    <footer>
         <div>
             <ul class="redesSociales">
                 <li>
@@ -214,8 +465,11 @@
             <p>Copyright ©2023</p>
         </div>
     </footer>
-    <script src="./model/producto.js"></script>
-    <script src="item.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="./model/cliente.js"></script>
+    <script src="./model/user.js"></script>
     <script src="app.js"></script>
 </body>
 

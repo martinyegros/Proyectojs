@@ -1,0 +1,56 @@
+[
+    {
+        "nombre": "Mancuerna 10kg",
+        "precio": "$5000",
+        "img": "./assets/img/m1.jpeg",
+        "id":1
+    },
+    {
+        "nombre": "Pesa Rusa 5kg",
+        "precio": "$4000",
+        "img": "./assets/img/m2.jpg",
+        "id":2
+    },
+    {
+        "nombre": "Disco 20kg",
+        "precio": "$9000",
+        "img": "./assets/img/m3.jpg",
+        "id":3
+    },
+    {
+        "nombre": "Colchoneta",
+        "precio": "$2000",
+        "img": "./assets/img/c1.jpg",
+        "id":4
+    },
+    {
+        "nombre": "Soga",
+        "precio": "$4000",
+        "img": "./assets/img/c2.jpg",
+        "id":5
+    },
+    {
+        "nombre": "Tobillera",
+        "precio": "$2500",
+        "img": "./assets/img/c3.jpg",
+        "id":6
+    },
+    {
+        "nombre": "Whey Protein 1kg",
+        "precio": "$9000",
+        "img": "./assets/img/w1.jpeg",
+        "id":7
+    },
+    {
+        "nombre": "Whey Protein 453gr",
+        "precio": "$6000",
+        "img": "./assets/img/w2.jpeg",
+        "id":8
+    },
+    {
+        "nombre": "Oxido 400gr",
+        "precio": "$3500",
+        "img": "./assets/img/w3.jpeg",
+        "id":9
+    }
+]

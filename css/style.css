@@ -2,67 +2,479 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+*::after,
+*::before,
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 /*colores
 #404258
 #474E68
 #50577A
 #6B728E*/
-
 body {
-    position: relative; }
+  position: relative; }
 
-.headerr {
-    background-image: url(../assets/img/01.jpg);
-    background-position: 50% 50%;
-    background-size: cover;
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 84.22px;
-    left: 0%;
-    top: 0%;
-    flex-flow: row wrap;
-    justify-content: space-between; }
-
-.headerr .logo a img {
+header {
+  background-image: url(../assets/img/01.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 75px;
+  left: 0%;
+  top: 0%;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  header .logo a img {
     position: absolute;
     width: 13.195%;
     height: 37.19px;
     left: 5%;
     top: 25%; }
-
-
-.headerr nav .navegador {
+  header nav .navegador {
     display: flex;
     gap: 5%;
     list-style: none;
     position: absolute;
     width: 40%;
     height: 79.8px;
-    left: 58.35%;
+    left: 20%;
     top: 0%;
     align-items: center;
     padding: 0%;
     margin: 0%; }
+    header nav .navegador li a {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 139%;
+      line-height: 100%;
+      text-align: center;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      text-decoration: none; }
 
-.headerr nav .navegador li a {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 139%;
-    line-height: 100%;
-    text-align: center;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    text-decoration: none; }
+.container-icon {
+  position: relative;
+  }
+.count-products{
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  background-color: #000;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  }
+.container-cart-products {
+  position: absolute;
+  top: 65px;
+  right: 10px;
+  background-color: #fff;
+  width: 300px;
+  max-height: 500px;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  border-radius: 10px;
+  overflow: scroll;
+  }
+.cart-tit {
+  padding: 15px;
+}
+.cart-tit p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.cart-product {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+  border-top: 1px solid rgba(0, 0, 0, 0.20);
+  }
+.info-cart-product {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.8;
+  }
+.titulo-producto-carrito {
+  margin-left: 8px;
+  font-size: 20px;
+  }
+.precio-producto-carrito {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 10px;
+  }
+.cantidad-producto-carrito {
+  font-weight: 400;
+  font-size: 20px;
+  }
+.icon-close {
+  width: 25px;
+  height: 25px;
+  }
+.icon-close :hover {
+  stroke: red;
+  cursor: pointer;
+}
+.cart-total {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  }
+.cart-total p {
+  font-size: 20px;
+  font-weight: 700;
+}
+.total-pagar {
+  font-size: 20px;
+  font-weight: 900;
+}
+.icon-cart {
+  position: absolute;
+  top: 8px;
+  right: 25px;
+  width: 40px;
+  height: 60px;
+  stroke: white;
+  }
+.icon-cart :hover {
+  cursor: pointer;
+}
+.hidden-cart {
+  display: none;
+}
+.cart-empty {
+  padding: 20px;
+  text-align: center;
+}
+.cart-pagar {
+  justify-content: center;
+  align-content: center;
+  height: 45px;
+  border-top: 1px solid rgba(0, 0, 0, 0.20);
+  }
+.btn-pagar {
+  margin-top: 10px;
+  position: absolute;
+  left: 110px;
+  width: 80px;
+  height: 25px;
+  box-sizing: border-box;
+  border: 2.5px solid black;
+  border-radius: 20px;
+  background: #50577A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 90%;
+  color: white;
+}
+.hidden{
+  display: none;
+}
 
-.headerr nav .navegador #inscribite {
-    width: 125px;
+footer {
+  position: absolute;
+  width: 100%;
+  height: 46.16px;
+  left: 0%;
+  top: 4830px;
+  display: flex;
+  background: #6B728E;
+  justify-content: space-between; }
+
+footer div .redesSociales {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  flex-direction: row;
+  justify-content: center;
+  top: 30%;
+  left: 42.7%;
+  position: absolute; }
+  footer div .redesSociales li a img {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute; }
+
+footer .copy {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: black;
+  font-family: "Poppins", sans-serif; }
+  footer .copy p {
+    position: absolute;
+    width: 104px;
+    height: 18px;
+    right: 36px;
+    top: 17px;
+    margin: 0%; }
+
+main {
+  background-image: url(../assets/img/Fondo.png);
+  position: absolute;
+  width: 100%;
+  height: 4070px;
+  left: 0px;
+  top: 75px;
+  background-position: 50% 50%;
+  background-size: cover; }
+  main #secUno {
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: none;
+    background-image: url(../assets/img/02.jpg);
+    position: absolute;
+    width: 97%;
+    height: 280px;
+    left: 1.4%;
+    top: 10px;
+    display: flex;
+    background-position: 50% 50%;
+    background-size: cover; }
+    main #secUno .secImguno a img {
+      position: absolute;
+      width: 58%;
+      height: 55%;
+      left: 21%;
+      top: 22%;
+      opacity: none;
+      display: flex;
+      -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+      animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1; } }
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1; } }
+    main #secUno .secTit h1 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 125%;
+      line-height: 100%;
+      text-align: center;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      position: absolute;
+      width: 25%;
+      height: 10%;
+      left: 37.5%;
+      top: 85%;
+      -webkit-animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1; } }
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1; } }
+
+    main #secDos {
+      position: absolute;
+      width: 100%;
+      height: 980px;
+      left: 0px;
+      top: 300px;
+      }
+      main #secDos .titClas h2 {
+        position: absolute;
+        width: 100%;
+        top: 30px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 250%;
+        line-height: 50%;
+        text-align: center;
+        color: white;
+        font-family: "Roboto", sans-serif;
+      }
+      main #secDos .musc1 {
+        width: 100%;
+        height: 400px;
+      }
+      main #secDos .musc1 #carouselExampleCaptions {
+        position: absolute;
+        width: 90%;
+        height: 400px;
+        left: 5%;
+        top: 90px;}
+        main #secDos .musc1 #carouselExampleCaptions .carousel-item {
+          height: 400px;
+        }
+
+  main #secDos .musc2 {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 500px;
+    display: flex;
+  }
+  main #secDos .musc2 .card {
+    position: relative;
+    height: 450px;
+  }
+  main #secDos .musc2 .card-body {
+    background-color: white;
+    color: black;
+  }
+
+  main #secTres{
+    background-color: #D9D9D9;
+      position: absolute;
+      width: 100%;
+      height: 1200px;
+      left: 0px;
+      top: 1280px;
+    }
+    
+    main #secTres div .titComp {
+        position: absolute;
+        width: 100%;
+        top: 65px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 250%;
+        line-height: 50%;
+        text-align: center;
+        color: black;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 0.5em;
+        -webkit-animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+        
+        @-webkit-keyframes focus-in-contract-bck {
+            0% {
+                letter-spacing: 1em;
+                -webkit-transform: translateZ(300px);
+                transform: translateZ(300px);
+                -webkit-filter: blur(12px);
+                filter: blur(12px);
+                opacity: 0; }
+            100% {
+                -webkit-transform: translateZ(12px);
+                transform: translateZ(12px);
+                -webkit-filter: blur(0);
+                filter: blur(0);
+                opacity: 1; } }
+        
+        @keyframes focus-in-contract-bck {
+            0% {
+                letter-spacing: 1em;
+                -webkit-transform: translateZ(300px);
+                transform: translateZ(300px);
+                -webkit-filter: blur(12px);
+                filter: blur(12px);
+                opacity: 0; }
+            100% {
+                -webkit-transform: translateZ(12px);
+                transform: translateZ(12px);
+                -webkit-filter: blur(0);
+                filter: blur(0);
+                opacity: 1; } }
+    
+    #items {
+      position: absolute;
+      top: 150px;
+      justify-content: center;
+      width: 100%;
+      height: 1000px;
+      display: flex;
+    }
+    
+    .card {
+        margin: 0.5em;
+        height: 330px;
+        width: 400px;
+        background-color: white;
+    }
+    
+    .image-wrapper {
+        width: 100%;  
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card .image-wrapper img {
+        max-width: 50%;
+        max-height: 100%;
+    }
+    
+    .card-title {
+        position: absolute;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 120%;
+        line-height: 50%;
+        text-align: center;
+        color: black;
+        font-family: "Roboto", sans-serif;
+    }
+
+    .card-precio {
+      position: absolute;
+      top: 240px;
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 250%;
+      line-height: 100%;
+      text-align: center;
+      color: black;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .btn-dark {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    width: 180px;
     height: 40px;
     box-sizing: border-box;
     border: 5px solid black;
@@ -71,202 +483,111 @@ body {
     align-content: center;
     display: flex;
     align-items: center;
-    justify-content: center; }
-
-.headerr nav .navegador #inscribite a {
+    justify-content: center;
     font-family: "Poppins", sans-serif;
-    font-size: 90%; }
+    font-size: 90%;
+    color: white;
+    }
 
-.headerr nav .navegador #inscribite :hover {
-    color: black; }
-
-footer {
-    position: absolute;
-    width: 100%;
-    height: 46.16px;
-    left: 0%;
-    top: 1234.22px;
-    display: flex;
-    background: #6B728E;
-    justify-content: space-between;}
-
-footer div .redesSociales {
-    display: flex;
-    gap: 50px;
-    list-style: none;
-    flex-direction: row;
-    justify-content: center;
-    top: 30%;
-    left: 45.2%;
-    position: absolute;}
-
-footer div .redesSociales li a img {
-    display: flex;
-    width: 20px;
-    height: 20px;
-    position: absolute;}
-
-#foot div .redesSociales {
-    left: 42.7%;
-} 
-
-footer .copy {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    text-align: center;
-    color: black;
-    font-family: "Poppins", sans-serif; }
-
-footer .copy p {
-    position: absolute;
-    width: 104px;
-    height: 18px;
-    right: 36px;
-    top: 17px;
-    margin: 0%; }
-
-.compras {
-    background-image: url(../assets/img/14.jpg);
-    position: absolute;
-    width: 100%;
-    height: 1150px;
-    left: 0px;
-    top: 84.22px;
-    background-position: 50% 50%;
-    background-size: cover;
-}
-
-.compras .comprasUno {
-    position: absolute;
-    width: 100%;
-    height: 450px;
-    left: 0%;
-    top: 0px;
-}
-
-.compras .comprasUno div .titComp {
-    position: absolute;
-    width: 100%;
-    top: 70px;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 250%;
-    line-height: 50%;
-    text-align: center;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    letter-spacing: 0.5em;
-    -webkit-animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+  main #secCuatro {
+      background-image: url(../assets/img/14.jpg);
+      position: absolute;
+      width: 100%;
+      height: 800px;
+      left: 0px;
+      top: 2480px;
+      background-position: 50% 50%;
+      background-size: cover; }
+      main #secCuatro #titHor {
+        position: absolute;
+        width: 100%;
+        height: 5%;
+        left: 0%;
+        top: 50px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 300%;
+        line-height: 50%;
+        text-align: center;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 0.2em;
+        -webkit-animation: focus-in-contract 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: focus-in-contract 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
     
-    @-webkit-keyframes focus-in-contract-bck {
-        0% {
-            letter-spacing: 1em;
-            -webkit-transform: translateZ(300px);
-            transform: translateZ(300px);
-            -webkit-filter: blur(12px);
-            filter: blur(12px);
-            opacity: 0; }
-        100% {
-            -webkit-transform: translateZ(12px);
-            transform: translateZ(12px);
-            -webkit-filter: blur(0);
-            filter: blur(0);
-            opacity: 1; } }
+    @-webkit-keyframes focus-in-contract {
+      0% {
+        letter-spacing: 1em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0; }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1; } }
     
-    @keyframes focus-in-contract-bck {
-        0% {
-            letter-spacing: 1em;
-            -webkit-transform: translateZ(300px);
-            transform: translateZ(300px);
-            -webkit-filter: blur(12px);
-            filter: blur(12px);
-            opacity: 0; }
-        100% {
-            -webkit-transform: translateZ(12px);
-            transform: translateZ(12px);
-            -webkit-filter: blur(0);
-            filter: blur(0);
-            opacity: 1; } }
+    @keyframes focus-in-contract {
+      0% {
+        letter-spacing: 1em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0; }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1; } }
+        main #secCuatro .tabHor {
+        position: absolute;
+        width: 80%;
+        height: 75%;
+        left: 10%;
+        top: 120px;
+        background: #50577A;
+        border-radius: 30px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 100%;
+        line-height: 100%;
+        text-align: center;
+        color: black;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 0.2em;
+        -webkit-animation: color-change-5x 5s linear infinite alternate both;
+      animation: color-change-5x 5s linear infinite alternate both; }
+  @-webkit-keyframes color-change-5x {
+    0% {
+      background: #404258; }
+    25% {
+      background: #474E68; }
+    50% {
+      background: #50577A; }
+    75% {
+      background: #6B728E; }
+    100% {
+      background-color: white; } }
+  @keyframes color-change-5x {
+    0% {
+      background: #404258; }
+    25% {
+      background: #474E68; }
+    50% {
+      background: #50577A; }
+    75% {
+      background: #6B728E; }
+    100% {
+      background-color: white; } }
 
-#carouselExampleControls{
-    width: 100%;
-    position: absolute;
-    top: 140px;
-}
-
-.cards-wrapper {
-    display: flex;
-}
-
-.card {
-    margin: 0.5em;
-    height: 250px;
-    width: 33%;
-    background-color: #6B728E;
-}
-
-.image-wrapper {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card .image-wrapper img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.card-title {
-    position: absolute;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 100%;
-    line-height: 50%;
-    text-align: center;
-    color: black;
-    font-family: "Roboto", sans-serif;
-}
-
-.comprasDos {
-    position: absolute;
-    width: 100%;
-    height: 700px;
-    left: 0%;
-    top: 450px;
-}
-
-.compras .comprasDos div div form label {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 150%;
-    line-height: 150%;
-    text-align: center;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    text-decoration: none;
-}
-
-.font-white {
-    color: #6B728E;
-}
-
-.secIns {
-    background-image: url(../assets/img/10.jpg);
-    width: 100%;
-    height: 1150px;
-    left: 0px;
-    top: 84.22px;
-    position: relative;
-    display: flex;
-    background-position: 50% 50%;
-    background-size: cover; }
-
-.secIns div .titIns {
+main #secCinco {
+  background-color: aliceblue;
+  width: 100%;
+  height: 950px;
+  left: 0px;
+  top: 3280px;
+  position: relative;
+  display: flex;
+  background-position: 50% 50%;
+  background-size: cover; }
+  main #secCinco div .titIns {
     position: absolute;
     width: 100%;
     top: 5%;
@@ -280,369 +601,342 @@ footer .copy p {
     letter-spacing: 0.5em;
     -webkit-animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: focus-in-contract-bck 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
-    
-    @-webkit-keyframes focus-in-contract-bck {
-        0% {
-            letter-spacing: 1em;
-            -webkit-transform: translateZ(300px);
-            transform: translateZ(300px);
-            -webkit-filter: blur(12px);
-            filter: blur(12px);
-            opacity: 0; }
-        100% {
-            -webkit-transform: translateZ(12px);
-            transform: translateZ(12px);
-            -webkit-filter: blur(0);
-            filter: blur(0);
-            opacity: 1; } }
-    
-    @keyframes focus-in-contract-bck {
-        0% {
-            letter-spacing: 1em;
-            -webkit-transform: translateZ(300px);
-            transform: translateZ(300px);
-            -webkit-filter: blur(12px);
-            filter: blur(12px);
-            opacity: 0; }
-        100% {
-            -webkit-transform: translateZ(12px);
-            transform: translateZ(12px);
-            -webkit-filter: blur(0);
-            filter: blur(0);
-            opacity: 1; } }
 
-.secIns .card-container {
+@-webkit-keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+    transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateZ(12px);
+    transform: translateZ(12px);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1; } }
+
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+    transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateZ(12px);
+    transform: translateZ(12px);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1; } }
+    main #secCinco .card-container {
     display: flex;
     position: absolute;
     justify-content: space-evenly;
     width: 100%;
     top: 12%; }
+    main #secCinco .card-container .card {
+      width: 25%;
+      height: 280px;
+      background: #50577A;
+      box-sizing: border-box;
+      border: 2px solid black;
+      border-radius: none;
+      position: relative;
+      border-radius: 30px;
+      -webkit-animation: heartbeat 2s ease-in-out infinite both;
+      animation: heartbeat 2s ease-in-out infinite both; }
 
-.secIns .card-container .card {
-    width: 25%;
-    height: 280px;
-    background: #50577A;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: none;
-    position: relative;
-    border-radius: 30px;
-    -webkit-animation: heartbeat 2s ease-in-out infinite both;
-    animation: heartbeat 2s ease-in-out infinite both; }
-    
-    @-webkit-keyframes heartbeat {
-        from {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-transform-origin: center center;
-            transform-origin: center center;
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; }
-        10% {
-            -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-        17% {
-            -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; }
-        33% {
-            -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-        45% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; } }
-    
-    @keyframes heartbeat {
-        from {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-transform-origin: center center;
-            transform-origin: center center;
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; }
-        10% {
-            -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-        17% {
-            -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; }
-        33% {
-            -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-        45% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; } }
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; } }
 
-.secIns .card-container .card h2 {
-    position: absolute;
-    width: 90%;
-    height: 10%;
-    left: 5%;
-    top: 5%;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 200%;
-    line-height: 50%;
-    text-align: center;
-    color: black;
-    font-family: "Roboto", sans-serif; }
-
-.secIns .card-container .card .precio {
-    position: absolute;
-    width: 100%;
-    height: 15%;
-    left: 0%;
-    top: 20%;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 280%;
-    line-height: 50%;
-    text-align: center;
-    color: black;
-    font-family: "Roboto", sans-serif; }
-
-.secIns .card-container .card h3 {
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    left: 0%;
-    top: 35%;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 140%;
-    line-height: 30%;
-    text-align: center;
-    color: white;
-    font-family: "Roboto", sans-serif; }
-
-.secIns .card-container .card .listIns {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    left: 0%;
-    top: 45%;
-    list-style: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 120%;
-    line-height: 150%;
-    text-align: center;
-    color: black;
-    font-family: "Poppins", sans-serif; }
-
-.secIns .card-container .card .listIns p button {
-    border: none;
-    outline: 0;
-    padding: 5px;
-    color: white;
-    background-color: black;
-    text-align: center;
-    cursor: pointer;
-    width: 50%;
-    font-size: 18px;
-    border-radius: 30px; }
-
-.secIns .card-container .card .listIns p button :hover {
-    opacity: 0.7; }
-
-.secIns div form .cuadroDos {
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; } }
+      main #secCinco .card-container .card h6 {
+        position: absolute;
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 5%;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 200%;
+        line-height: 50%;
+        text-align: center;
+        color: black;
+        font-family: "Roboto", sans-serif; }
+      main #secCinco .card-container .card .precio {
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        left: 0%;
+        top: 20%;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 280%;
+        line-height: 50%;
+        text-align: center;
+        color: black;
+        font-family: "Roboto", sans-serif; }
+      main #secCinco .card-container .card .mes {
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        left: 0%;
+        top: 35%;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 140%;
+        line-height: 30%;
+        text-align: center;
+        color: white;
+        font-family: "Roboto", sans-serif; }
+        main #secCinco .card-container .card .listIns {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        left: -5%;
+        top: 43%;
+        text-align: center;
+        list-style: none;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 120%;
+        line-height: 150%;
+        color: black;
+        font-family: "Poppins", sans-serif; }
+        main #secCinco .card-container .card .listIns p button {
+          border: none;
+          outline: 0;
+          padding: 5px;
+          color: white;
+          background-color: black;
+          text-align: center;
+          cursor: pointer;
+          width: 50%;
+          font-size: 18px;
+          border-radius: 30px; }
+          main #secCinco .card-container .card .listIns p button :hover {
+            opacity: 0.7; }
+  main #secCinco div form .cuadroDos {
     position: absolute;
     width: 40%;
     height: 47%;
     left: 5%;
-    top: 42.7%;
+    top: 450px;
     background: #474E68;
     border-radius: 30px; }
-
-.secIns div form .cuadroDos .titInfo {
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    left: 0%;
-    top: 8%;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 220%;
-    line-height: 120%;
-    text-align: center;
-    color: black;
-    font-family: "Roboto", sans-serif; }
-
-.secIns div form .cuadroDos .cheUno {
-    position: absolute;
-    width: 88%;
-    height: 0%;
-    left: 6%;
-    top: 21%;
-    border: 1px solid black; }
-
-.secIns div form .cuadroDos .formUno {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    left: 10%;
-    top: 31.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroDos .formDos {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    right: 10%;
-    top: 31.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroDos .formTres {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    left: 10%;
-    top: 55.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroDos .formCuatro {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    right: 10%;
-    top: 55.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroDos .formCinco {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    left: 10%;
-    top: 79.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroDos .formSeis {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    right: 10%;
-    top: 79.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroTres {
+    main #secCinco div form .cuadroDos .titInfo {
+      position: absolute;
+      width: 100%;
+      height: 10%;
+      left: 0%;
+      top: 8%;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 220%;
+      line-height: 120%;
+      text-align: center;
+      color: black;
+      font-family: "Roboto", sans-serif; }
+    main #secCinco div form .cuadroDos .cheUno {
+      position: absolute;
+      width: 88%;
+      height: 0%;
+      left: 6%;
+      top: 21%;
+      border: 1px solid black; }
+    main #secCinco div form .cuadroDos .formUno {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      left: 10%;
+      top: 31.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroDos .formDos {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      right: 10%;
+      top: 31.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroDos .formTres {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      left: 10%;
+      top: 55.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroDos .formCuatro {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      right: 10%;
+      top: 55.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroDos .formCinco {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      left: 10%;
+      top: 79.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroDos .formSeis {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      right: 10%;
+      top: 79.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+  main #secCinco div form .cuadroTres {
     position: absolute;
     width: 40%;
     height: 47%;
     right: 5%;
-    top: 42.7%;
+    top: 450px;
     background: #474E68;
     border-radius: 30px; }
-
-.secIns div form .cuadroTres .titPago {
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    left: 0%;
-    top: 8%;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 220%;
-    line-height: 120%;
-    text-align: center;
-    color: black;
-    font-family: "Roboto", sans-serif; }
-
-.secIns div form .cuadroTres .cheDos {
-    position: absolute;
-    width: 88%;
-    height: 0px;
-    left: 6%;
-    top: 21%;
-    border: 1px solid black; }
-
-.secIns div form .cuadroTres .formSiete {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    left: 10%;
-    top: 31.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroTres .formOcho {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    right: 10%;
-    top: 31.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroTres .formNueve {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    left: 10%;
-    top: 55.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroTres .formDiez {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    right: 10%;
-    top: 55.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroTres .formOnce {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    left: 10%;
-    top: 79.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form .cuadroTres .formDoce {
-    position: absolute;
-    width: 35%;
-    height: 12%;
-    right: 10%;
-    top: 79.5%;
-    background: white;
-    border-radius: 10px;
-    text-align: center; }
-
-.secIns div form button {
+    main #secCinco div form .cuadroTres .titPago {
+      position: absolute;
+      width: 100%;
+      height: 10%;
+      left: 0%;
+      top: 8%;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 220%;
+      line-height: 120%;
+      text-align: center;
+      color: black;
+      font-family: "Roboto", sans-serif; }
+    main #secCinco div form .cuadroTres .cheDos {
+      position: absolute;
+      width: 88%;
+      height: 0px;
+      left: 6%;
+      top: 21%;
+      border: 1px solid black; }
+    main #secCinco div form .cuadroTres .formSiete {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      left: 10%;
+      top: 31.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroTres .formOcho {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      right: 10%;
+      top: 31.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroTres .formNueve {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      left: 10%;
+      top: 55.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroTres .formDiez {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      right: 10%;
+      top: 55.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroTres .formOnce {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      left: 10%;
+      top: 79.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+    main #secCinco div form .cuadroTres .formDoce {
+      position: absolute;
+      width: 35%;
+      height: 12%;
+      right: 10%;
+      top: 79.5%;
+      background: white;
+      border-radius: 10px;
+      text-align: center; }
+  main #secCinco div form button {
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 30px;
@@ -650,7 +944,7 @@ footer .copy p {
     width: 8%;
     height: 3%;
     left: 46%;
-    top: 92%;
+    top: 905px;
     background: #6B728E;
     font-style: normal;
     font-weight: 600;
@@ -659,61 +953,160 @@ footer .copy p {
     text-align: center;
     color: black;
     font-family: "Roboto", sans-serif;
-    cursor: pointer;
     -webkit-animation: shake-bottom 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
-    animation: shake-bottom 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;}
-    
-    @-webkit-keyframes shake-bottom {
-        0%,
-        100% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-            -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%; }
-        10% {
-            -webkit-transform: rotate(2deg);
-            transform: rotate(2deg); }
-        20%,
-        40%,
-        60% {
-            -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg); }
-        30%,
-        50%,
-        70% {
-            -webkit-transform: rotate(4deg);
-            transform: rotate(4deg); }
-        80% {
-            -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg); }
-        90% {
-            -webkit-transform: rotate(2deg);
-            transform: rotate(2deg); } }
-    
-    @keyframes shake-bottom {
-        0%,
-        100% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-            -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%; }
-        10% {
-            -webkit-transform: rotate(2deg);
-            transform: rotate(2deg); }
-        20%,
-        40%,
-        60% {
-            -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg); }
-        30%,
-        50%,
-        70% {
-            -webkit-transform: rotate(4deg);
-            transform: rotate(4deg); }
-        80% {
-            -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg); }
-        90% {
-            -webkit-transform: rotate(2deg);
-            transform: rotate(2deg); } 
-        }
+    animation: shake-bottom 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both; }
+
+@-webkit-keyframes shake-bottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%; }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg); }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg); }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg); }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); } }
+
+@keyframes shake-bottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%; }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg); }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg); }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg); }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); } }
+
+main #secSeis {
+  background-image: url(../assets/img/15.jpg);
+  position: absolute;
+  width: 100%;
+  height: 530px;
+  left: 0px;
+  top: 4230px;
+  background-position: 50% 50%;
+  background-size: cover; }
+  main #secSeis div h5 {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0%;
+    top: 20px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 200%;
+    line-height: 150%;
+    text-align: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.2em;
+    -webkit-animation: tracking-in-contract 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-contract 3s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0; }
+  40% {
+    opacity: 0.6; }
+  100% {
+    letter-spacing: 0.2em;
+    opacity: 1; } }
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0; }
+  40% {
+    opacity: 0.6; }
+  100% {
+    letter-spacing: 0.2em;
+    opacity: 1; } }
+  main #secSeis .nosUno p {
+    position: absolute;
+    width: 50%;
+    height: 400px;
+    top: 150px;
+    left: 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 170%;
+    line-height: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Poppins", sans-serif;}
+    main #secSeis .nosUno .parUno {
+      position: absolute;
+      width: 15%;
+      height: 5%;
+      left: 30%;
+      top: 440px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 120%;
+      line-height: 100%;
+      text-align: center;
+      color: black;
+      font-family: "Roboto", sans-serif; }
+    main #secSeis .nosUno .parDos {
+      position: absolute;
+      width: 23%;
+      height: 5%;
+      left: 25%;
+      top: 470px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 120%;
+      line-height: 100%;
+      text-align: center;
+      color: black;
+      font-family: "Roboto", sans-serif; }
+
+main #secSeis .nosDos {
+  position: absolute;
+  width: 50%;
+  height: 500px;
+  left: 50%;}
+
+  main #secSeis .nosDos .youtNos {
+    position: absolute;
+    width: 90%;
+    height: 400px;
+    right: 5%;
+    top: 100px;
+    background: #D9D9D9;
+    border-radius: 30px; }
+
