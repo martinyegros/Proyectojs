@@ -87,7 +87,7 @@ header {
   overflow: scroll;
   }
 .cart-tit {
-  padding: 50px;
+  height: 50px;
 }
 .cart-tit p {
   padding: 10px;
