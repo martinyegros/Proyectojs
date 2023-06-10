@@ -90,45 +90,56 @@ header {
   padding: 15px;
 }
 .cart-tit p {
+  padding: 10px;
   font-size: 20px;
   font-weight: 500;
 }
 .cart-product {
   display: flex;
-  justify-content: space-between;
-  padding: 15px;
+  width: 430px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.20);
   border-top: 1px solid rgba(0, 0, 0, 0.20);
   }
 .info-cart-product {
   display: flex;
-  justify-content: space-between;
-  flex: 0.8;
+  margin-top: 15px;
+  }
+.d-titc {
+  width: 200px;
+  margin-left: 10px;
   }
 .titulo-producto-carrito {
-  margin-left: 8px;
   font-size: 20px;
+  }
+.d-botones {
+  width: 75px;
+  }
+.d-prec {
+  width: 75px;
   }
 .precio-producto-carrito {
   font-weight: 700;
   font-size: 20px;
-  margin-left: 10px;
+  }
+.d-cant {
+  width: 35px;
   }
 .cantidad-producto-carrito {
   font-weight: 400;
   font-size: 20px;
+  margin-left: 10px;
+  }
+.d-elim {
+  width: 30px;
   }
 .icon-close {
   width: 25px;
   height: 25px;
   }
-.icon-close :hover {
-  stroke: red;
-  cursor: pointer;
-}
 .cart-total {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   }
 .cart-total p {
@@ -158,6 +169,7 @@ header {
   text-align: center;
 }
 .cart-pagar {
+  display: flex;
   justify-content: center;
   align-content: center;
   height: 45px;
@@ -165,8 +177,6 @@ header {
   }
 .btn-pagar {
   margin-top: 10px;
-  position: absolute;
-  left: 110px;
   width: 80px;
   height: 25px;
   box-sizing: border-box;
