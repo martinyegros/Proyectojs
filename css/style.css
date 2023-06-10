@@ -79,7 +79,7 @@ header {
   top: 65px;
   right: 10px;
   background-color: #fff;
-  width: 300px;
+  width: 450px;
   max-height: 500px;
   z-index: 1;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
@@ -87,7 +87,7 @@ header {
   overflow: scroll;
   }
 .cart-tit {
-  padding: 15px;
+  padding: 50px;
 }
 .cart-tit p {
   padding: 10px;
@@ -142,7 +142,7 @@ header {
   align-items: center;
   gap: 20px;
   }
-.cart-total p {
+.cart-total span {
   font-size: 20px;
   font-weight: 700;
 }
@@ -176,7 +176,7 @@ header {
   border-top: 1px solid rgba(0, 0, 0, 0.20);
   }
 .btn-pagar {
-  margin-top: 10px;
+  margin-top: 10px; 
   width: 80px;
   height: 25px;
   box-sizing: border-box;
