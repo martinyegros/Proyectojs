@@ -63,6 +63,16 @@ botonCart.addEventListener('click', () => {
 const addCarrito = e => {
     if (e.target.classList.contains('btn-dark')) {
         setCarrito(e.target.parentElement)
+        Toastify({
+            text: "Producto Seleccionado",
+            duration: 4000,
+            close: false,
+            gravity: "top",
+            position: "left",
+            style: {
+                background: "linear-gradient(to right, #000, #000 )",
+            },
+            }).showToast();
     }
     e.stopPropagation()
 }
@@ -169,7 +179,7 @@ const btnAccion = e => {
 const btnEliminar = e => {
     if(e.target.classList.contains('icon-close')) {
         Swal.fire({
-            title: 'Estas seguro?', 
+            title: 'Desea eliminar la fila?', 
             icon: 'warning',
             showCancelButton: true,
             cancelButtonText: 'No',

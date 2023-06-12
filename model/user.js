@@ -22,15 +22,128 @@ const btnCompraUno = document.getElementById('comp1');
 const btnCompraDos = document.getElementById('comp2');
 const btnCompraTres = document.getElementById('comp3');
 
-//Escuchador del boton
+//Escuchador de botones
+
+const planesList = document.querySelector('.card-container')
+
+let planSel = '';
+
+const enviarPlan = (e) => {
+    btnEnviarIns.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        if (validarCamposVacios()) {
+            registrarUsuario();
+            limpiarFormulario(formRegistro);
+            Swal.fire(
+                'Bienvenido a MarGym',
+                'Usted abonó el ' + (planSel),
+                'success'
+            )
+            evento.stopPropagation();
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Formulario Incompleto!',
+                text: 'No pudo realizar la inscripción!',
+                })
+            evento.stopPropagation();
+            
+        }
+    })
+} 
+
 btnEnviarIns.addEventListener('click', (evento) => {
     evento.preventDefault();
-    if (validarCamposVacios()) {
-        registrarUsuario();
-        alert('Inscripción Exitosa!, bienvenido a MarGym');
-        limpiarFormulario(formRegistro);
-    }else {
-        alert('No pudo realizar la inscripción');
+    Swal.fire({
+        icon: 'error',
+        title: 'Formulario Incompleto!',
+        text: 'No pudo realizar la inscripción!',
+        })
+})
+
+
+planesList.addEventListener('click', e => {
+    if(e.target.classList.contains('btn-plan1')) {
+        const planes = e.target.parentElement
+
+        const infoPlanes = {
+            id: planes.querySelector('.btn-plan1').dataset.id,
+            titulo: planes.querySelector('.titplan').textContent,
+            cuesta: planes.querySelector('.precio').textContent,
+        }
+
+        planSel = (infoPlanes.titulo);
+
+        enviarPlan();
+
+        e.stopPropagation();
+
+        Toastify({
+            text: "Plan Seleccionado",
+            duration: 4000,
+            close: false,
+            gravity: "bottom",
+            position: "right",
+            style: {
+                background: "linear-gradient(to right, #000, #000 )",
+            },
+            }).showToast();
+    } else {
+        if(e.target.classList.contains('btn-plan2')) {
+            const planes = e.target.parentElement
+    
+            const infoPlanes = {
+                id: planes.querySelector('.btn-plan2').dataset.id,
+                titulo: planes.querySelector('.titplan').textContent,
+                cuesta: planes.querySelector('.precio').textContent,
+            }
+    
+            planSel = (infoPlanes.titulo);
+    
+            enviarPlan();
+
+            e.stopPropagation();
+
+            Toastify({
+                text: "Plan Seleccionado",
+                duration: 4000,
+                close: false,
+                gravity: "bottom",
+                position: "right",
+                style: {
+                    background: "linear-gradient(to right, #000, #000 )",
+                },
+                }).showToast();
+        } else {
+            if(e.target.classList.contains('btn-plan3')) {
+                const planes = e.target.parentElement
+        
+                const infoPlanes = {
+                    id: planes.querySelector('.btn-plan3').dataset.id,
+                    titulo: planes.querySelector('.titplan').textContent,
+                    cuesta: planes.querySelector('.precio').textContent,
+                }
+        
+                planSel = (infoPlanes.titulo);
+        
+                enviarPlan();
+
+                e.stopPropagation();
+
+                Toastify({
+                    text: "Plan Seleccionado",
+                    duration: 4000,
+                    close: false,
+                    gravity: "bottom",
+                    position: "right",
+                    style: {
+                        background: "linear-gradient(to right, #000, #000 )",
+                    },
+                    }).showToast();
+            } else {
+                evento.stopPropagation();
+            }
+        }
     }
 })
 

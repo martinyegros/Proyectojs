@@ -769,10 +769,13 @@ main #secCinco {
         line-height: 150%;
         color: black;
         font-family: "Poppins", sans-serif; }
-        main #secCinco .card-container .card .listIns p button {
+        main #secCinco .card-container .card button {
+          position: absolute;
+          width: 20px;
+          height: 30px;
+          left: 25%;
+          top: 85%;
           border: none;
-          outline: 0;
-          padding: 5px;
           color: white;
           background-color: black;
           text-align: center;
@@ -780,8 +783,8 @@ main #secCinco {
           width: 50%;
           font-size: 18px;
           border-radius: 30px; }
-          main #secCinco .card-container .card .listIns p button :hover {
-            opacity: 0.7; }
+          main #secCinco .card-container .card button :hover {
+            opacity: 0.1; }
   main #secCinco div form .cuadroDos {
     position: absolute;
     width: 40%;
