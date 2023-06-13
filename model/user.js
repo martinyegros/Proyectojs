@@ -15,137 +15,46 @@ const inputNumeroTar = document.getElementById('numtar');
 const inputSeguridad = document.getElementById('segutar');
 const inputNumeroCuota = document.getElementById('numcuota');
 
-const btnEnviarIns = document.getElementById('enviarins');
 const formRegistro = document.getElementById('form-registrar');
-
-const btnCompraUno = document.getElementById('comp1');
-const btnCompraDos = document.getElementById('comp2');
-const btnCompraTres = document.getElementById('comp3');
 
 //Escuchador de botones
 
 const planesList = document.querySelector('.card-container')
 
-let planSel = '';
+let planes = '';
 
-const enviarPlan = (e) => {
-    btnEnviarIns.addEventListener('click', (evento) => {
-        evento.preventDefault();
+planesList.addEventListener('click', e => {
+
+    if(e.target.classList.contains('btn-plan')) {
+        planSel(e.target.parentElement)
         if (validarCamposVacios()) {
             registrarUsuario();
             limpiarFormulario(formRegistro);
+            console.log(planes)
             Swal.fire(
+                'Usted abonó ' + (planes),
                 'Bienvenido a MarGym',
-                'Usted abonó el ' + (planSel),
                 'success'
             )
-            evento.stopPropagation();
         } else {
             Swal.fire({
                 icon: 'error',
                 title: 'Formulario Incompleto!',
                 text: 'No pudo realizar la inscripción!',
                 })
-            evento.stopPropagation();
-            
-        }
-    })
-} 
-
-btnEnviarIns.addEventListener('click', (evento) => {
-    evento.preventDefault();
-    Swal.fire({
-        icon: 'error',
-        title: 'Formulario Incompleto!',
-        text: 'No pudo realizar la inscripción!',
-        })
-})
-
-
-planesList.addEventListener('click', e => {
-    if(e.target.classList.contains('btn-plan1')) {
-        const planes = e.target.parentElement
-
-        const infoPlanes = {
-            id: planes.querySelector('.btn-plan1').dataset.id,
-            titulo: planes.querySelector('.titplan').textContent,
-            cuesta: planes.querySelector('.precio').textContent,
-        }
-
-        planSel = (infoPlanes.titulo);
-
-        enviarPlan();
-
-        e.stopPropagation();
-
-        Toastify({
-            text: "Plan Seleccionado",
-            duration: 4000,
-            close: false,
-            gravity: "bottom",
-            position: "right",
-            style: {
-                background: "linear-gradient(to right, #000, #000 )",
-            },
-            }).showToast();
-    } else {
-        if(e.target.classList.contains('btn-plan2')) {
-            const planes = e.target.parentElement
-    
-            const infoPlanes = {
-                id: planes.querySelector('.btn-plan2').dataset.id,
-                titulo: planes.querySelector('.titplan').textContent,
-                cuesta: planes.querySelector('.precio').textContent,
-            }
-    
-            planSel = (infoPlanes.titulo);
-    
-            enviarPlan();
-
-            e.stopPropagation();
-
-            Toastify({
-                text: "Plan Seleccionado",
-                duration: 4000,
-                close: false,
-                gravity: "bottom",
-                position: "right",
-                style: {
-                    background: "linear-gradient(to right, #000, #000 )",
-                },
-                }).showToast();
-        } else {
-            if(e.target.classList.contains('btn-plan3')) {
-                const planes = e.target.parentElement
-        
-                const infoPlanes = {
-                    id: planes.querySelector('.btn-plan3').dataset.id,
-                    titulo: planes.querySelector('.titplan').textContent,
-                    cuesta: planes.querySelector('.precio').textContent,
-                }
-        
-                planSel = (infoPlanes.titulo);
-        
-                enviarPlan();
-
-                e.stopPropagation();
-
-                Toastify({
-                    text: "Plan Seleccionado",
-                    duration: 4000,
-                    close: false,
-                    gravity: "bottom",
-                    position: "right",
-                    style: {
-                        background: "linear-gradient(to right, #000, #000 )",
-                    },
-                    }).showToast();
-            } else {
-                evento.stopPropagation();
-            }
+                
         }
     }
 })
+
+const planSel = objeto => {
+    const plan = {
+        titulo: objeto.querySelector('.titplan').textContent,
+        price: objeto.querySelector('.precio').textContent,
+    }
+
+    planes = plan.price
+}
 
 function validarCamposVacios() {
     return inputNombre.value !== '' && inputDireccion.value !== '' && +inputNumDocumento.value !== '' 
