@@ -30,7 +30,6 @@ planesList.addEventListener('click', e => {
         if (validarCamposVacios()) {
             registrarUsuario();
             limpiarFormulario(formRegistro);
-            console.log(planes)
             Swal.fire(
                 'Usted abonó ' + (planes),
                 'Bienvenido a MarGym',
