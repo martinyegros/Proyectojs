@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         showHTML()
     }
 })
+
+////Eventos
+
 items.addEventListener('click', e => {
     addCarrito(e)
 })
@@ -32,7 +35,6 @@ rowProduct.addEventListener('click', e => {
     btnEliminar(e)
 })
 
-
 const fetchData = async () => {
     try {
         const res = await fetch('api.json')
@@ -43,6 +45,8 @@ const fetchData = async () => {
         console.log(error)
     }
 }
+
+////Creación de las cards
 
 const pintarCards = data => {
     data.forEach(producto => {
@@ -59,6 +63,8 @@ const pintarCards = data => {
 botonCart.addEventListener('click', () => {
     containerCartProducts.classList.toggle('hidden-cart');
 });
+
+////Agregar producto al carrito
 
 const addCarrito = e => {
     if (e.target.classList.contains('btn-dark')) {
@@ -97,6 +103,8 @@ const setCarrito = objeto => {
 
     showHTML();
 }
+
+////Creación del carrito en HTML
 
 const showHTML = () => {
     
@@ -155,6 +163,7 @@ const showHTML = () => {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
+////Botones
 
 const btnAccion = e => {
     if(e.target.classList.contains('btn-info')) {
