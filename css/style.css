@@ -342,23 +342,48 @@ header {
   height: 75px;
   top: 375px;
 }
-.container-pago .info-pago .div2 p {
+.container-pago .info-pago .div2 .total-pagar1 .tt1 {
   position: absolute;
-  top: 20px;
-  left: 10%;
+  top: 25px;
+  left: 25px;
   font-style: normal;
   font-weight: 600;
-  font-size: 150%;
+  font-size: 120%;
   line-height: 100%;
   text-align: center;
   color: black;
   font-family: "Roboto", sans-serif;
 }
-.container-pago .info-pago .div2 a {
+.container-pago .info-pago .div2 .total-pagar1 .tt2 {
   position: absolute;
-  left: 50%;
+  top: 0px;
+  left: 45px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 180%;
+  line-height: 100%;
+  text-align: center;
+  color: black;
+  font-family: "Roboto", sans-serif;
 }
-.container-pago .info-pago .div2 a img {
+
+.container-pago .info-pago .div2 .total-pagar2 p {
+  position: absolute;
+  top: -30px;
+  right: 6%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 120%;
+  line-height: 100%;
+  text-align: center;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.container-pago .info-pago  .div2 .total-pagar2 a {
+  position: absolute;
+  right: 5%;
+}
+.container-pago .info-pago .div2 .total-pagar2 a img {
   width: 250px;
   height: 75px;
 }
@@ -426,7 +451,7 @@ main {
     display: flex;
     background-position: 50% 50%;
     background-size: cover; }
-    main #secUno .secImguno a img {
+    main #secUno .secImguno img {
       position: absolute;
       width: 58%;
       height: 55%;
@@ -628,7 +653,7 @@ main {
     
     .card-title {
         position: absolute;
-        top: 210px;
+        top: 190px;
         font-style: normal;
         font-weight: 600;
         font-size: 120%;
@@ -640,7 +665,7 @@ main {
 
     .card-precio {
       position: absolute;
-      top: 230px;
+      top: 210px;
       font-style: normal;
       font-weight: 1000;
       font-size: 250%;
@@ -652,7 +677,7 @@ main {
 
     .btn-dark {
     position: absolute;
-    top: 275px;
+    top: 265px;
     left: 35%;
     width: 180px;
     height: 40px;

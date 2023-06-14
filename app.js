@@ -19,6 +19,8 @@ const pagar = document.querySelector('.cart-pagar');
 const formPago = document.getElementById('form-pagar');
 const botonPagar = document.querySelector('.close-pago');
 const compradoresList = document.querySelector('.container-pago');
+const divProd = document.querySelector('.total-pagar1');
+const parProd = document.querySelector('.tt2');
 const inputNombreTits = document.getElementById('nombtits');
 const inputNacimTits = document.getElementById('nacimtits');
 const inputNombreTars = document.getElementById('nombtars');
@@ -202,7 +204,7 @@ const btnAccion = e => {
 const btnEliminar = e => {
     if(e.target.classList.contains('icon-close')) {
         Swal.fire({
-            title: 'Desea eliminar la fila?', 
+            title: '¿Desea eliminar la fila?', 
             icon: 'warning',
             showCancelButton: true,
             cancelButtonText: 'No',
@@ -230,9 +232,15 @@ const btnEliminar = e => {
 const btnPagar = e => {
     if (e.target.classList.contains('btn-pagar')) {
         if(valorTotal.innerText != '$0') {
-            carrito = {};
             containerPagarProducts.classList.toggle('hidden-pago');
             delete containerCartProducts.classList.toggle('hidden-cart');
+            const containerPagar = document.createElement('p');
+            containerPagar.classList.add('total-pagar1');
+            containerPagar.innerHTML = `
+                <p class="tt2">${valorTotal.innerText}</p>
+                `;
+            parProd.append(containerPagar);
+            carrito = {};
             showHTML();
         } else {
             Swal.fire({
@@ -271,11 +279,12 @@ compradoresList.addEventListener('click', e => {
             registrarUsuarios();
             limpiarFormularios(formPago);
             Swal.fire(
-                'Compra Exitosa!',
+                'Pago Exitoso!',
                 'Gracias por su compra',
                 'success'
             )
             delete containerPagarProducts.classList.toggle('hidden-pago');
+            parProd.innerHTML = '';
         } else {
             Swal.fire({
                 icon: 'error',
@@ -289,4 +298,5 @@ compradoresList.addEventListener('click', e => {
 botonPagar.addEventListener('click', () => {
     delete containerPagarProducts.classList.toggle('hidden-pago');
     limpiarFormularios(formPago);
+    parProd.innerHTML = '';
 });
