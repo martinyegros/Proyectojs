@@ -1,17 +1,31 @@
-const items = document.getElementById('items')
+////Productos
+const items = document.getElementById('items');
 const templateCard = document.getElementById('template-card').content
-const fragment = document.createDocumentFragment()
+const fragment = document.createDocumentFragment();
 const botonCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector('.container-cart-products');
+const containerPagarProducts = document.querySelector('.container-pago');
 const cartInfo = document.querySelector('.cart-product');
 const rowProduct = document.querySelector('.row-product');
+////Carrito
 const productsList = document.querySelector('.row');
 const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 const valorTotal = document.querySelector('.total-pagar');
 const countProducts = document.querySelector('#contador-productos');
-const pagar = document.querySelector('.cart-pagar');
 let carrito = {};
+///Pagar
+const pagar = document.querySelector('.cart-pagar');
+const formPago = document.getElementById('form-pagar');
+const botonPagar = document.querySelector('.close-pago');
+const compradoresList = document.querySelector('.container-pago');
+const inputNombreTits = document.getElementById('nombtits');
+const inputNacimTits = document.getElementById('nacimtits');
+const inputNombreTars = document.getElementById('nombtars');
+const inputNumeroTars = document.getElementById('numtars');
+const inputSeguridads = document.getElementById('segutars');
+const inputNumeroCuotas = document.getElementById('numcuotas');
+const compradores = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchData()
@@ -211,15 +225,14 @@ const btnEliminar = e => {
     e.stopPropagation()
 }
 
+////Boton pagar producto
+
 const btnPagar = e => {
     if (e.target.classList.contains('btn-pagar')) {
         if(valorTotal.innerText != '$0') {
-            Swal.fire(
-                'Compra Exitosa',
-                'Gracias por su compra',
-                'success'
-            )
             carrito = {};
+            containerPagarProducts.classList.toggle('hidden-pago');
+            delete containerCartProducts.classList.toggle('hidden-cart');
             showHTML();
         } else {
             Swal.fire({
@@ -231,3 +244,49 @@ const btnPagar = e => {
         }
         e.stopPropagation()
     }
+
+////Formulario pago de productos
+
+function validarCamposVacioss() {
+    return inputNombreTits.value !== '' && inputNacimTits.value !== '' && inputNombreTars.value !== '' 
+    && +inputNumeroTars.value !== '' && +inputSeguridads.value !== '' && +inputNumeroCuotas.value !== '';
+}
+
+function registrarUsuarios() {
+    const nuevoComprador = new Comprador(inputNombreTits.value, inputNacimTits.value, inputNombreTars.value, 
+        +inputNumeroTars.value, +inputSeguridads.value, +inputNumeroCuotas.value);
+    compradores.push(nuevoComprador);
+}
+
+function limpiarFormularios(form) {
+    form.reset();
+}
+
+//Escuchador de botones
+
+compradoresList.addEventListener('click', e => {
+
+    if(e.target.classList.contains('btn-pagar2')) {
+        if (validarCamposVacioss()) {
+            registrarUsuarios();
+            limpiarFormularios(formPago);
+            Swal.fire(
+                'Compra Exitosa!',
+                'Gracias por su compra',
+                'success'
+            )
+            delete containerPagarProducts.classList.toggle('hidden-pago');
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Formulario Incompleto!',
+                text: 'No pudo realizar la compra!',
+                })
+        }
+    }
+})
+
+botonPagar.addEventListener('click', () => {
+    delete containerPagarProducts.classList.toggle('hidden-pago');
+    limpiarFormularios(formPago);
+});
