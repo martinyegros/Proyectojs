@@ -19,8 +19,6 @@ const pagar = document.querySelector('.cart-pagar');
 const formPago = document.getElementById('form-pagar');
 const botonPagar = document.querySelector('.close-pago');
 const compradoresList = document.querySelector('.container-pago');
-const divProd = document.querySelector('.total-pagar1');
-const parProd = document.querySelector('.tt2');
 const inputNombreTits = document.getElementById('nombtits');
 const inputNacimTits = document.getElementById('nacimtits');
 const inputNombreTars = document.getElementById('nombtars');
@@ -234,12 +232,8 @@ const btnPagar = e => {
         if(valorTotal.innerText != '$0') {
             containerPagarProducts.classList.toggle('hidden-pago');
             delete containerCartProducts.classList.toggle('hidden-cart');
-            const containerPagar = document.createElement('p');
-            containerPagar.classList.add('total-pagar1');
-            containerPagar.innerHTML = `
-                <p class="tt2">${valorTotal.innerText}</p>
-                `;
-            parProd.append(containerPagar);
+            carrito = {};
+            showHTML();
         } else {
             Swal.fire({
                 icon: 'error',
@@ -282,14 +276,11 @@ compradoresList.addEventListener('click', e => {
                 'success'
             )
             delete containerPagarProducts.classList.toggle('hidden-pago');
-            parProd.innerHTML = '';
-            carrito = {};
-            showHTML();
         } else {
             Swal.fire({
                 icon: 'error',
                 title: 'Formulario Incompleto!',
-                text: 'No pudo realizar la compra!',
+                text: 'No pudo realizar el pago!',
                 })
         }
     }
@@ -298,7 +289,6 @@ compradoresList.addEventListener('click', e => {
 botonPagar.addEventListener('click', () => {
     delete containerPagarProducts.classList.toggle('hidden-pago');
     limpiarFormularios(formPago);
-    parProd.innerHTML = '';
     carrito = {};
     showHTML();
 });
