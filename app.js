@@ -82,7 +82,7 @@ botonCart.addEventListener('click', () => {
 
 ////Agregar producto al carrito
 
-let addCarrito = e => {
+const addCarrito = e => {
     if (e.target.classList.contains('btn-dark')) {
         setCarrito(e.target.parentElement)
         Toastify({
@@ -240,9 +240,6 @@ const btnPagar = e => {
                 <p class="tt2">${valorTotal.innerText}</p>
                 `;
             parProd.append(containerPagar);
-            carrito = {};
-            showHTML();
-            addCarrito = '';
         } else {
             Swal.fire({
                 icon: 'error',
@@ -286,22 +283,8 @@ compradoresList.addEventListener('click', e => {
             )
             delete containerPagarProducts.classList.toggle('hidden-pago');
             parProd.innerHTML = '';
-            addCarrito = e => {
-                if (e.target.classList.contains('btn-dark')) {
-                    setCarrito(e.target.parentElement)
-                    Toastify({
-                        text: "Producto Seleccionado",
-                        duration: 4000,
-                        close: false,
-                        gravity: "top",
-                        position: "left",
-                        style: {
-                            background: "linear-gradient(to right, #000, #000 )",
-                        },
-                        }).showToast();
-                }
-                e.stopPropagation()
-            }
+            carrito = {};
+            showHTML();
         } else {
             Swal.fire({
                 icon: 'error',
@@ -316,20 +299,6 @@ botonPagar.addEventListener('click', () => {
     delete containerPagarProducts.classList.toggle('hidden-pago');
     limpiarFormularios(formPago);
     parProd.innerHTML = '';
-    addCarrito = e => {
-        if (e.target.classList.contains('btn-dark')) {
-            setCarrito(e.target.parentElement)
-            Toastify({
-                text: "Producto Seleccionado",
-                duration: 4000,
-                close: false,
-                gravity: "top",
-                position: "left",
-                style: {
-                    background: "linear-gradient(to right, #000, #000 )",
-                },
-                }).showToast();
-        }
-        e.stopPropagation()
-    }
+    carrito = {};
+    showHTML();
 });
